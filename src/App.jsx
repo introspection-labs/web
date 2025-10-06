@@ -21,33 +21,45 @@ function App() {
       }}>
         <div style={{ 
           display: 'flex', 
-          flexDirection: 'column', 
-          lineHeight: '0.9',
-          fontSize: '1rem'
+          alignItems: 'center'
         }}>
-          <div>T</div>
-          <div>IC</div>
+          <img 
+            src="/logo.png" 
+            alt="Logo" 
+            style={{ 
+              height: '2rem',
+              width: 'auto'
+            }}
+          />
         </div>
-        <button style={{ 
-          backgroundColor: 'rgba(200, 200, 200, 0.3)', 
-          color: '#333',
-          border: '1px solid rgba(0, 0, 0, 0.1)',
-          padding: '0.5rem 2rem',
-          borderRadius: '6px',
-          fontSize: '0.95rem',
-          cursor: 'pointer',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.backgroundColor = 'rgba(200, 200, 200, 0.5)'
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.backgroundColor = 'rgba(200, 200, 200, 0.3)'
-        }}>
+        <a 
+          href="https://calendly.com/ahitagnid/new-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          draggable="false"
+          style={{ 
+            backgroundColor: 'rgba(200, 200, 200, 0.3)', 
+            color: '#333',
+            border: '1px solid rgba(0, 0, 0, 0.1)',
+            padding: '0.5rem 2rem',
+            borderRadius: '6px',
+            fontSize: '0.95rem',
+            cursor: 'pointer',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            transition: 'all 0.3s ease',
+            textDecoration: 'none',
+            display: 'inline-block'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = 'rgba(200, 200, 200, 0.5)'
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = 'rgba(200, 200, 200, 0.3)'
+          }}
+        >
           Contact
-        </button>
+        </a>
       </header>
 
       {/* Section 2: Image */}
@@ -71,6 +83,7 @@ function App() {
           <img 
             src="/hero.png" 
             alt="Introspection Labs" 
+            draggable="false"
             style={{ 
               width: '100%', 
               height: '100%', 
