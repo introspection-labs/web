@@ -26,6 +26,7 @@ function App() {
           <img 
             src="/logo.png" 
             alt="Logo" 
+            draggable="false"
             style={{ 
               height: '2rem',
               width: 'auto'
