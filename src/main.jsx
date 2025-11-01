@@ -33,15 +33,23 @@ function App() {
       </section>
 
       <section style={{
-        padding: '4rem 2rem',
-        minHeight: '30vh'
+        padding: '0',
+        height: 'clamp(20vh, 40vw, 50vh)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#000'
       }}>
-        <div style={{
-          maxWidth: '72ch',
-          margin: '0 auto',
-          lineHeight: '1.6'
-        }}>
-        </div>
+        <img 
+          src="/dawn.png" 
+          alt="Dawn"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            display: 'block'
+          }}
+        />
       </section>
     </main>
   )
