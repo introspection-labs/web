@@ -8,3 +8,35 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative !important;
+  }
+
+  .desktop-nav-links {
+    display: none !important;
+  }
+
+  .desktop-download-btn {
+    display: none !important;
+  }
+
+  .mobile-nav-right {
+    display: flex !important;
+  }
+
+  .hamburger-icon {
+    display: block !important;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem !important;
+  }
+
+  .mobile-menu {
+    position: relative !important;
+    top: 0 !important;
+  }
+}

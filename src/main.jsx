@@ -1,43 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import Navbar from './Navbar'
 
 function App() {
   return (
     <main style={{
-      background: '#000',
+      background: '#1a1a1a',
       color: '#eee',
       minHeight: '100vh',
       margin: 0,
-      padding: 0
+      padding: 0,
+      display: 'flex',
+      flexDirection: 'column'
     }}>
-      <section style={{
-        height: '100vh',
-        position: 'relative',
-        overflow: 'clip',
-        background: 'linear-gradient(to bottom, #2c3e50 0%, #1a1a1a 70%, #0a0a0a 90%, #000000 100%)'
-      }}>
-      </section>
-
-      <section style={{
-        padding: '0',
-        height: 'clamp(20vh, 40vw, 50vh)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#000'
-      }}>
-        <img 
-          src="/dawn.png" 
-          alt="Dawn"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            display: 'block'
-          }}
-        />
-      </section>
+      <Navbar />
+      <div style={{ flex: 1 }} />
+      <img src="/dawn.png" alt="Dawn" style={{ width: '100%', display: 'block' }} />
     </main>
   )
 }
