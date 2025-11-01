@@ -15,21 +15,8 @@ function App() {
         height: '100vh',
         position: 'relative',
         overflow: 'clip',
-        WebkitMaskImage: 'linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.4) 85%, transparent 100%)',
-        maskImage: 'linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.4) 85%, transparent 100%)',
-        WebkitMaskComposite: 'source-over'
+        background: 'linear-gradient(to bottom, #2c3e50 0%, #1a1a1a 70%, #0a0a0a 90%, #000000 100%)'
       }}>
-        <img 
-          src="/mon.png" 
-          alt="Background"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block'
-          }}
-          loading="eager"
-        />
       </section>
 
       <section style={{
