@@ -1,22 +1,117 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Navbar from './Navbar'
+
+const NavLink = ({ to, children, isExternal, title }) => {
+  const linkStyle = {
+    display: 'inline',
+    color: '#fff',
+    textDecoration: 'none',
+    transition: 'all 0.2s ease',
+    cursor: 'pointer',
+    fontFamily: 'Calibri, sans-serif'
+  };
+
+  if (isExternal) {
+    return (
+      <a 
+        href={to} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style={{ ...linkStyle, fontSize: '16px' }}
+        title={title}
+        onMouseEnter={(e) => {
+          e.target.style.textDecoration = 'underline';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.textDecoration = 'none';
+        }}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <a
+      href={to}
+      className="text-16"
+      style={linkStyle}
+      title={title}
+      onMouseEnter={(e) => {
+        e.target.style.textDecoration = 'underline';
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.textDecoration = 'none';
+      }}
+    >
+      {children}
+    </a>
+  );
+};
 
 function App() {
   return (
     <main style={{
-      background: '#1a1a1a',
-      color: '#eee',
-      minHeight: '100vh',
       margin: 0,
       padding: 0,
-      display: 'flex',
-      flexDirection: 'column'
+      width: '100%',
+      height: '100vh',
+      overflow: 'hidden'
     }}>
-      <Navbar />
-      <div style={{ flex: 1 }} />
-      <img src="/dawn.png" alt="Dawn" style={{ width: '100%', display: 'block' }} />
+      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+        <img src="/hero.png" alt="Hero" style={{ 
+          width: '100%', 
+          height: '100%',
+          display: 'block',
+          objectFit: 'cover',
+          objectPosition: 'center'
+        }} />
+        <div className="dawn-text-overlay" style={{
+          position: 'absolute',
+          top: '50%',
+          right: '5%',
+          transform: 'translateY(-50%)',
+          textAlign: 'right',
+          fontFamily: 'Calibri, sans-serif',
+          color: '#fff',
+          width: '30vw'
+        }}>
+          <p style={{ 
+            margin: 0, 
+            fontWeight: 'normal',
+            whiteSpace: 'pre-line'
+          }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <img src="/dawnw.png" alt="Dawn logo" style={{ height: '48px', display: 'block' }} />
+              <span style={{ fontSize: '48px', textTransform: 'lowercase' }}>dawn</span>
+            </span>{'\n'}
+            <span style={{ fontSize: '28px', fontStyle: 'italic', textTransform: 'lowercase' }}>[dawn]</span>{'\n'}
+            <span style={{ fontSize: '20px' }}>/ dɔn /</span>{'\n\n'}
+            <span style={{ fontSize: '20px' }}>Your thoughts shouldn't cost you. {'\n\n'} Dawn is speech-to-text for macOS, powered by AI, free forever</span>
+          </p>
+        </div>
+        <div className="bottom-left-text" style={{
+          position: 'absolute',
+          bottom: '5%',
+          left: '5%',
+          fontFamily: 'Calibri, sans-serif',
+          color: '#fff',
+          textAlign: 'left'
+        }}>
+          <p style={{ 
+            margin: 0, 
+            fontWeight: 'normal',
+            whiteSpace: 'pre-line'
+          }}>
+            <span style={{ fontSize: '32px', display: 'block', marginBottom: '0.5rem' }}>Type at the speed of thought.</span>
+            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+              <NavLink to="#about" title="About">About</NavLink>
+              <NavLink to="#privacy" title="Privacy Policy">Privacy Policy</NavLink>
+            </div>
+          </p>
+        </div>
+      </div>
     </main>
   )
 }
