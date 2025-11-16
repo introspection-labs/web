@@ -86,8 +86,6 @@ function App() {
               <img src="/dawnw.png" alt="Dawn logo" style={{ height: '48px', display: 'block' }} />
               <span style={{ fontSize: '48px', textTransform: 'lowercase' }}>dawn</span>
             </span>{'\n\n'}
-            {/* <span style={{ fontSize: '28px', fontStyle: 'italic', textTransform: 'lowercase' }}>[dawn]</span>{'\n'} */}
-            {/* <span style={{ fontSize: '20px' }}>/ dɔn /</span>{'\n\n'} */}
             <span style={{ fontSize: '20px' }}>Your thoughts shouldn't cost you. {'\n\n'} Dawn is speech-to-text for macOS, powered by AI, free forever</span>
           </p>
           <button className="download-button" style={{
