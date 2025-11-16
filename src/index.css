@@ -25,9 +25,18 @@ img {
   overflow: hidden;
 }
 
+.download-button {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 20px rgba(255, 255, 255, 0.4) !important;
+}
+
 @media (max-width: 768px) {
   .dawn-text-overlay {
-    width: 50vw !important;
+    width: 35vw !important;
   }
   
   .dawn-text-overlay p > span:first-child img {
@@ -39,11 +48,6 @@ img {
   }
   
   .dawn-text-overlay p > span:nth-child(2) {
-    font-size: 24px !important;
-  }
-  
-  .dawn-text-overlay p > span:nth-child(3),
-  .dawn-text-overlay p > span:nth-child(4) {
     font-size: 16px !important;
   }
   

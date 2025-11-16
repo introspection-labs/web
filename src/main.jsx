@@ -70,12 +70,12 @@ function App() {
         <div className="dawn-text-overlay" style={{
           position: 'absolute',
           top: '50%',
-          right: '5%',
+          right: '2.5%',
           transform: 'translateY(-50%)',
           textAlign: 'right',
           fontFamily: 'Calibri, sans-serif',
           color: '#fff',
-          width: '30vw'
+          width: '20vw'
         }}>
           <p style={{ 
             margin: 0, 
@@ -85,16 +85,34 @@ function App() {
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               <img src="/dawnw.png" alt="Dawn logo" style={{ height: '48px', display: 'block' }} />
               <span style={{ fontSize: '48px', textTransform: 'lowercase' }}>dawn</span>
-            </span>{'\n'}
-            <span style={{ fontSize: '28px', fontStyle: 'italic', textTransform: 'lowercase' }}>[dawn]</span>{'\n'}
-            <span style={{ fontSize: '20px' }}>/ dɔn /</span>{'\n\n'}
+            </span>{'\n\n'}
+            {/* <span style={{ fontSize: '28px', fontStyle: 'italic', textTransform: 'lowercase' }}>[dawn]</span>{'\n'} */}
+            {/* <span style={{ fontSize: '20px' }}>/ dɔn /</span>{'\n\n'} */}
             <span style={{ fontSize: '20px' }}>Your thoughts shouldn't cost you. {'\n\n'} Dawn is speech-to-text for macOS, powered by AI, free forever</span>
           </p>
+          <button className="download-button" style={{
+            marginTop: '1.5rem',
+            padding: '0.75rem 1.5rem',
+            backgroundColor: 'rgba(128, 128, 128, 0.15)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            borderRadius: '16px',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+            color: '#fff',
+            fontSize: '16px',
+            fontWeight: '500',
+            cursor: 'pointer',
+            fontFamily: 'Calibri, sans-serif',
+            whiteSpace: 'nowrap'
+          }}>
+            Download for macOS
+          </button>
         </div>
         <div className="bottom-left-text" style={{
           position: 'absolute',
           bottom: '5%',
-          left: '5%',
+          left: '2.5%',
           fontFamily: 'Calibri, sans-serif',
           color: '#fff',
           textAlign: 'left'
