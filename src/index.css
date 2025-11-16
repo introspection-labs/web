@@ -36,7 +36,11 @@ img {
 
 @media (max-width: 768px) {
   .dawn-text-overlay {
-    width: 35vw !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    right: 5% !important;
+    left: 5% !important;
+    text-align: center !important;
   }
   
   .dawn-text-overlay p > span:first-child img {
@@ -51,8 +55,14 @@ img {
     font-size: 16px !important;
   }
   
+  .bottom-left-text {
+    left: 5% !important;
+    right: 5% !important;
+    max-width: 90% !important;
+  }
+  
   .bottom-left-text p > span {
-    font-size: 28px !important;
+    font-size: 24px !important;
   }
   
   .bottom-left-text a {
